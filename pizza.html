@@ -1,0 +1,120 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<script type="text/javascript" src="script.js"></script>
+	</head>
+	<body onload="loadMenu()">
+		<form name="addPizza" onsubmit="return submitNewPizza()" method="post">
+			<div id="information">
+			</div>
+			Name: 
+			<br>
+			<input type="text" name="pizzaName" placeholder="Input pizza's name">
+			<br>
+			Price:
+			<input type="number" name="pizzaPrice" min="0.01" step="0.01">
+			Heat:
+			<input type="number" name="pizzaHeat" min="1" max="3">
+			<br>
+			Toppings:
+			<br>
+			<table>
+				<tr>
+					<td>
+						<input type="checkbox" name="topping" id="peperoni" value="peperoni">
+						<label for="peperoni">Peperoni</label>
+					</td>
+					<td>
+						<input type="checkbox" name="topping" id="sausgages" value="sausgages">
+						<label for="sausgages">Sausgages</label>
+					</td>
+					<td>
+						<input type="checkbox" name="topping" id="mushrooms" value="mushrooms">
+						<label for="mushrooms">Mushrooms</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="checkbox" name="topping" id="cheese" value="cheese">
+						<label for="cheese">Cheese</label>
+					</td>
+					<td>
+						<input type="checkbox" name="topping" id="onions" value="onions">
+						<label for="onions">Onions</label>
+					</td>
+					<td>
+						<input type="checkbox" name="topping" id="pineapples" value="pineapples">
+						<label for="pineapples">Pineapples</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="checkbox" name="topping" id="anchovies" value="anchovies">
+						<label for="anchovies">Anchovies</label>
+					</td>
+					<td>
+						<input type="checkbox" name="topping" id="brokoli" value="brokoli">
+						<label for="brokoli">Brokoli</label>
+					</td>
+					<td>
+						<input type="checkbox" name="topping" id="eggplant" value="eggplant">
+						<label for="eggplant">Eggplant</label>
+					</td>
+				</tr>
+			</table> 
+			Photo: 
+			<input type="text" name="photo" hidden>
+			<table>
+				<tr>
+					<td>
+						 <img id="Pizza-Toppings1.jpg" src="Pizza-Toppings1.jpg" width="117" height="94" onclick="drawBorder(this.id)">
+					</td>
+					<td>
+						 <img id="Pizza-Toppings2.jpg" src="Pizza-Toppings2.jpg" width="117" height="94" onclick="drawBorder(this.id)">
+					</td>
+					<td>
+						 <img id="Pizza-Toppings3.jpg" src="Pizza-Toppings3.jpg" width="117" height="94" onclick="drawBorder(this.id)">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						 <img id="Pizza-Toppings4.jpg" src="Pizza-Toppings4.jpg" width="117" height="94" onclick="drawBorder(this.id)">
+					</td>
+					<td>
+						 <img id="Pizza-Toppings5.jpg" src="Pizza-Toppings5.jpg" width="117" height="94" onclick="drawBorder(this.id)">
+					</td>
+					<td>
+						 <img id="Pizza-Toppings6.jpg" src="Pizza-Toppings6.jpg" width="117" height="94" onclick="drawBorder(this.id)">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						 <img id="Pizza-Toppings7.jpg" src="Pizza-Toppings7.jpg" width="117" height="94" onclick="drawBorder(this.id)">
+					</td>
+					<td>
+						 <img id="Pizza-Toppings8.jpg" src="Pizza-Toppings8.jpg" width="117" height="94" onclick="drawBorder(this.id)"> 
+					</td>
+					<td>
+						 <img id="Pizza-Toppings9.jpg" src="Pizza-Toppings9.jpg" width="117" height="94" onclick="drawBorder(this.id)">
+					</td>
+				</tr>
+			</table> 
+			<input type="submit" value="Submit">
+		</form>
+		
+		<br>
+		<p id="pizzaMenuLabel"></p>
+		
+		<p>Order by: </>
+		<select name="order">
+		  <option onclick="sortMenu('by name')">Name</option>
+		  <option onclick="sortMenu('by price')">Price</option>
+		  <option onclick="sortMenu('by heat')">Heat</option>
+		</select>
+
+		<ul id="pizzaMenu">
+		</ul>
+		
+		
+	</body>
+</html>
